@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="type_code_size">22sp</dimen>
+    <dimen name="code_size">18sp</dimen>
+    <dimen name="type_code_page_padding">55sp</dimen>
+    <dimen name="type_code_width">317sp</dimen>
+    <dimen name="type_code_height">40sp</dimen>
+    <dimen name="code_margin_bottom">20sp</dimen>
+</resources>
