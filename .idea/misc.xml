@@ -8,6 +8,11 @@
         <entry key="..\:/Develop/StepikAndroidCourse/Converter/app/src/main/res/font/font.xml" value="0.19322916666666667" />
         <entry key="..\:/Develop/StepikAndroidCourse/Converter/app/src/main/res/font/montserrat_alternates_medium.xml" value="0.19322916666666667" />
         <entry key="..\:/Develop/StepikAndroidCourse/Converter/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
+        <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.18" />
+        <entry key="app/src/main/res/layout-land/activity_pin_code_status.xml" value="0.20634920634920634" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.17325227963525835" />
+        <entry key="app/src/main/res/layout/activity_pin_code_status.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/activity_pincode_status.xml" value="0.15579710144927536" />
       </map>
     </option>
   </component>
