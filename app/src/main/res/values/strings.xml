@@ -13,4 +13,13 @@
     <string name="remove"><![CDATA[<]]></string>
     <string name="zero">0</string>
     <string name="ok">OK</string>
+    <string name="share">Поделиться</string>
+    <string name="send_by_post">Отправить по почте</string>
+    <string name="call">Позвонить</string>
+    <string name="launch_camera">Сменить фото профиля</string>
+    <string name="person_info">Ilyas Sabitov\ni.m.a.m.sabitov@mail.com</string>
+    <string name="cam_not_found">Камера не найдена!</string>
+    <string name="type_message">...введите текст</string>
+    <string name="choose_post_app">Выберите приложение для отправки почты</string>
+    <string name="not_correct_pincode">Не полный пин код</string>
 </resources>

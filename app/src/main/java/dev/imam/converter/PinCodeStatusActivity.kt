@@ -17,11 +17,11 @@ class PinCodeStatusActivity : AppCompatActivity() {
 
         textViewCode = findViewById(R.id.code)
 
-        initActivityFieldsFromBundle(savedInstanceState)
+        initActivityFields(savedInstanceState)
         initActivityFieldsFromIntent()
     }
 
-    private fun initActivityFieldsFromBundle(savedInstanceState: Bundle?){
+    private fun initActivityFields(savedInstanceState: Bundle?){
         savedInstanceState?.getCharSequence(PIN_CODE)?.let {
             textViewCode.text = it
         }

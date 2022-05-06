@@ -26,4 +26,21 @@
         <item name="android:layout_marginLeft">10sp</item>
         <item name="android:layout_marginRight">10sp</item>
     </style>
+    <style name="btn_personal_page_style">
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontWeight">300</item>
+        <item name="android:textColor">#1789DB</item>
+        <item name="android:layout_marginTop">20sp</item>
+        <item name="android:layout_width">371sp</item>
+        <item name="android:layout_height">52sp</item>
+    </style>
+    <style name="person_info_style">
+        <item name="android:layout_marginBottom">31sp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:lineSpacingExtra">16sp</item>
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+    </style>
 </resources>
