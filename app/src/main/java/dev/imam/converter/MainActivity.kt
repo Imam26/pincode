@@ -1,7 +1,10 @@
 package dev.imam.converter
 
+import android.animation.TimeInterpolator
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
+import android.os.VibrationEffect
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -50,7 +53,8 @@ class MainActivity : AppCompatActivity() {
     private fun onClickOkBtn(){
         if(textViewCode.length() == PIN_CODE_LENGTH) {
             Toast.makeText(this, "${textViewCode.text.toString()}", Toast.LENGTH_SHORT).show()
-            startPersonalPageActivity()
+            runShakeAnimation(500L)
+            //startPersonalPageActivity()
             //startPinCodeStatusActivity()
 
         } else {
@@ -81,5 +85,29 @@ class MainActivity : AppCompatActivity() {
     private fun startPersonalPageActivity() {
         val intent = Intent(this, PersonalPageActivity::class.java)
         startActivity(intent)
+    }
+
+    private fun runShakeAnimation(duration: Long){
+        val decayingSineWave = TimeInterpolator { input ->
+            val raw = kotlin.math.sin(3f * input * 2 * Math.PI)
+            (raw * kotlin.math.exp((-input * 2f).toDouble())).toFloat()
+        }
+
+        textViewCode.animate()
+            .xBy(-100f)
+            .setInterpolator(decayingSineWave)
+            .setDuration(duration)
+            .withStartAction { runVibration(duration) }
+    }
+
+    private fun runVibration(duration:Long){
+        val vibrator = getSystemService(android.os.Vibrator::class.java)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            vibrator.vibrate(VibrationEffect.createOneShot(duration, VibrationEffect.DEFAULT_AMPLITUDE))
+        } else {
+            @Suppress("DEPRECATION")
+            vibrator.vibrate(duration)
+        }
     }
 }

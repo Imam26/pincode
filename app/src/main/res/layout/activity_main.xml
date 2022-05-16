@@ -128,7 +128,7 @@
 
         <Button
             android:id="@+id/btn_ok"
-            style="@style/btn_code_style"
+            style="@style/btn_ok_style"
             app:layout_constraintLeft_toRightOf="@id/btn_zero"
             app:layout_constraintTop_toBottomOf="@id/btn_nine"
             app:layout_constraintRight_toRightOf="parent"
