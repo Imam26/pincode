@@ -40,8 +40,15 @@ class MainActivity : AppCompatActivity() {
             onClickOkBtn()
         }
 
-        findViewById<Button>(R.id.btn_remove).setOnClickListener {
+        val removeBtn = findViewById<Button>(R.id.btn_remove)
+
+        removeBtn.setOnClickListener {
             onClickRemoveBtn()
+        }
+
+        removeBtn.setOnLongClickListener{
+            onLongPressRemoveBtn()
+            return@setOnLongClickListener true
         }
     }
 
@@ -65,6 +72,12 @@ class MainActivity : AppCompatActivity() {
     private fun onClickRemoveBtn(){
         if(textViewCode.text.isNotEmpty()){
             textViewCode.text = textViewCode.text.dropLast(1)
+        }
+    }
+
+    private fun onLongPressRemoveBtn(){
+        if(textViewCode.text.isNotEmpty()){
+            textViewCode.text = ""
         }
     }
 
